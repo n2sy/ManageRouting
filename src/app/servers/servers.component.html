@@ -1,0 +1,20 @@
+
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="list-group">
+      <a class="list-group-item" *ngFor="let ser of listServers"
+        [routerLink]="['/servers', ser.id]"
+        [queryParams]="{allowEdit : ser.id == 3 ? '1' : '0'}"
+        >
+        {{ ser.name}}
+      </a>
+
+    </div>
+    
+
+  </div>
+  <div class="col-md-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>

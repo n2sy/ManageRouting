@@ -1,0 +1,6 @@
+<strong> {{ oneServer.name }} </strong>
+<h6> Le statut du serveur est {{ oneServer.status }}</h6>
+<br>
+<button [disabled]="!allow" class="btn btn-info" (click)="editServeur()">Editer</button>
+
+<div *ngIf="!allow" > Impossible d'éditer ce serveur !</div>

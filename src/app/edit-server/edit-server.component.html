@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="name"></label>
+  <input #n [ngModel]="editedServer.name" type="text" class="form-control" id="name" name="name">
+</div>
+<div class="form-group">
+  <label for="status"></label>
+  <input #s [ngModel]="editedServer.status" type="text" class="form-control" id="status" name="status">
+</div>
+<button class="btn btn-primary" (click)="onUpdate(n.value, s.value)">
+  Mettre à jour
+</button>
